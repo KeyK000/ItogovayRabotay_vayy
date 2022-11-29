@@ -11,6 +11,15 @@
     }
 }
 
+void PrintArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+    Console.WriteLine();
+}
+
 
 Console.WriteLine("Введите длинну массива: ");
 int count = Convert.ToInt32(Console.ReadLine());
@@ -26,3 +35,9 @@ for (int i = 0; i < defaultArray.Length; i++)
 string[] filteredArray = new string[defaultArray.Length];
 
 FilterArray(defaultArray, filteredArray);
+
+Console.WriteLine("\n===========================\n");
+Console.WriteLine("Отфильтрованный массив:"); 
+
+PrintArray(filteredArray);
+
